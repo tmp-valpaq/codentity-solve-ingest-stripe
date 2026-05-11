@@ -41,6 +41,7 @@ def find_answer(question):
     return "unknown"
 
 @app.route('/', methods=['GET', 'POST'])
+@app.route('/query', methods=['GET', 'POST'])
 def handle():
     if request.method == 'GET':
         return jsonify({"status": "ok"}), 200
